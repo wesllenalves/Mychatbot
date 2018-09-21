@@ -33,6 +33,7 @@ function trataResposta(err, resposta){
 	const mensagemUsuario = prompt('>>');
 	chatbot.message({
 		workspace_id,
-		input: {text: mensagemUsuario}
+		input: {text: mensagemUsuario},
+		context: resposta.context
 	},trataResposta);
 }
